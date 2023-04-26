@@ -1,0 +1,590 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background: hsla(355, 84%, 80%, 1);
+    background: radial-gradient(circle, hsla(355, 84%, 80%, 1) 0%, hsla(355, 50%, 23%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(355, 84%, 80%, 1) 0%, hsla(355, 50%, 23%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(355, 84%, 80%, 1) 0%, hsla(355, 50%, 23%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7A3AA", endColorstr="#581D22", GradientType=1 ); 
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#navbar {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: solid 1px white;
+    width: 100vw;
+    height: 60px;
+    z-index: 1;
+    transition: 0.4s; 
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    background: #581D22;
+    right: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    inset: 0;
+    opacity: 0.70;
+    z-index: -1;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+}
+
+.closeBtn {
+    display: none;
+}
+
+.openBtn {
+    display: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li  {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    margin: 0 30px;
+}
+
+.psyco-icon {
+    margin: 10px 30px 5px 30px ;
+    width: 40px;
+    transition: 0.4s;
+}
+
+@media (max-width: 600px) {
+
+    #navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-y: hidden;
+        padding-top: 60px;
+        transition: ease-in-out 0.5s;
+    }
+    .navbar-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        height: 100%;
+        width: 145px;
+        margin: 0;
+        padding: 0;
+               
+    }
+    #navbar a {
+        color: #fff;
+        padding: 8px 8px 8px 0px;
+        display: block;
+        margin: 0;
+    }
+    .navbar ul li  {
+        margin: 0;
+    }
+    #navbar #logo {
+        margin: 0;
+    }
+    .navbar::after {
+        display: none !important; 
+    }
+    .closeBtn {
+        color: #fff;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        margin: 5px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .openBtn {
+        position: fixed;
+        display: block;
+        margin: 7px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .fa-x, .fa-bars {
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+    }
+    
+   
+}
+
+.section-01 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 500px;
+    margin: 20px 0 0 0;
+    }
+
+.content {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 80vw;
+  
+}
+/* //////// Ana Card ////////////// */
+.ana-card {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #A2575D;
+    padding-top: 30px;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    left: 150px;
+}
+
+.ana {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 10px #fff;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px #581D22;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.ana-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.ana-card .icons {
+    position: absolute;
+    width: 300px;
+    font-size: 1.9rem;
+    bottom: 15px;
+}
+
+.fa-brands, .fa-envelope {
+    color: #fff;
+    cursor: pointer;
+    margin: 5px 10px;
+    transition: 300ms;
+}
+
+.fa-brands:hover, .fa-regular:hover {
+    transform: translateY(-5px);
+    transition: 300ms;
+}
+
+.ana:hover {
+    transform: translateY(-5px);
+    transition: 300ms;
+}
+
+.title {
+    position: absolute;
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-top: 250px;
+}
+
+.crp {
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-top: 300px;
+}
+
+.box {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    left: 0;
+    background-color: #9D8877;
+}
+
+.title-container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    left:470px;
+    height: 350px;
+    width: 350px;
+}
+
+/* Olá */
+.first-title {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    border-bottom: solid 3px #D9BEB2;
+    border-right: solid 0.5px #D9BEB2;
+    border-radius: 20%;
+}
+
+/* Descrição pessoal */
+.second-title {
+    position: absolute;
+    left: 10px;
+    top: 120px;
+    width: 300px;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    color: #fff;
+}
+/* Flexibilidade */
+.third-title {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 10px;
+    top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    color: #fff;
+    width: 350px;
+}
+
+.ana-btn {
+    position: absolute;
+    font-size: 1rem;
+    left: 10px;
+    top: 270px;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #A2575D;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.ana-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 5px #111
+}
+
+.ana-btn:active {
+    background-color: #61312C;
+    ;
+}
+
+/* ///////// Slides /////////////////////// */
+
+.section-02 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.section-02::before {
+    content: "";
+    position: absolute;
+    background-color:#fff;
+    margin-top: 50px;
+    height: 200px;
+    width: 100vw;
+    z-index: -1 ;
+}
+
+.navTabs-slides ul li  {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.slideTab:hover {
+    color: #581D22;
+    background-color: #D8D5D3;
+}
+.slideTab:current {
+    color: #581D22;
+    background-color: #D8D5D3;
+}
+
+
+.slides-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.slides {
+    display: flex;
+    justify-content: center;
+}
+
+.slide.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #fff;
+    border: solid 1px #9D8877;
+    color: #61312C;
+    border-radius: 5px;
+    height: 190px;
+    width: 90vw;
+    padding-top: 5px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide-text {
+    margin: 5px;
+}
+
+.slide .sub-title {
+    color: #61312C;
+}
+
+@media (min-width: 1200px) {
+    .slides-container {
+        width: 1200px;
+    }
+
+    .content {
+        width: 1000px;
+    }
+}
+
+/* ///////////////Serviços///////////////// */
+.section-03 {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin: 70px 0 0 0;
+}
+
+.section-03::before {
+    content: "";
+    position: absolute;
+    background-color:#9D8877;
+    margin-top: 50px;
+    width: 100vw;
+    height: 300px;
+    z-index: -1 ;
+}
+.servicos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servico {
+    background-color: #fff;
+    color: #581D22;
+    text-align: center;
+    height: 230px;
+    width: 300px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 0 150px 0 150px;
+}
+
+.section-03 .servicos .fa-solid, .fa-sharp {
+    font-size: 3rem;
+    color: #A2575D;
+    margin: 10px 50%;
+}
+
+/* ///////////Contato///////////////// */
+.contact {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    min-width: 50vw;
+    height: 100vh;
+}
+
+.contactMe {
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    width: 100vw;
+    height: 550px;
+    padding-top: 15px;
+    border: solid 1px #61312C;
+    box-shadow: 0 2px 7px #414040;
+}
+
+.contact .contactMe .icons {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.contact .contactMe img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.contact .contactMe .fa-brands, .contact .contactMe .fa-regular {
+    font-size: 30px;
+}
+
+/* //////////////Sobre mim////////////////// */
+
+.sobre {
+    height: 100vh;
+}
+
+.sobreMim {
+    background-color: #581D22;
+    padding: 10px;
+    margin-top: 100px;
+    /* width: 400px; */
+    
+}
+
+.sobre .sobreMim h1 {
+    color: #fff;
+    font-size: 4rem;
+    max-width: 400px;
+    padding-left: 150px;
+    
+}
+
+.minhaDescricao {
+    background-color: #9D8877;
+    
+}
+
+.minhaDescricao p {
+    color: #fff;
+    padding-left: 400px;
+    max-width: 570px;
+    padding-right: 15px;
+}
+
+@media (max-width: 900px) {
+    .section-01 {
+        margin: 0;
+        height: 720px;
+    }
+    .title-container {
+        top: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        height: 250px;      
+    }
+    .first-title, .second-title, .third-title {
+        position: initial;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .ana-card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ana-btn {
+        position: relative;
+        margin: 0 auto;
+        top: 0;
+    }
+    /* //////Sobre mim */
+    .minhaDescricao p {
+        padding: 10px;
+    }
+    .sobre .sobreMim h1 {
+        padding: 10px;
+    }
+
+
+}
+
+
+.n1 {
+    background-color: #581D22;
+    width: 20px 20px;
+    margin:10px ;
+}
+
+.n2 {
+    background-color: #A2575D;
+    width: 20px 20px;
+    margin:10px ;
+}
+
+.n3 {
+    background-color: #AF9A94;
+    width: 20px 20px;
+    margin:10px ;
+}
+
+.n4 {
+    background-color: #D8D5D3;
+    width: 20px 20px;
+    margin:10px ;
+}
+
+.n5 {
+    background-color: #9D8877;
+    width: 20px 20px;
+    margin:10PX ;
+}
